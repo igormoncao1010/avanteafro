@@ -174,6 +174,11 @@ footer { background: var(--clay); color: white; padding: 70px 6vw 34px; display:
 footer > p { margin: 0; color: rgba(255,255,255,.9); line-height: 1.6; }
 .footer-links { display: flex; gap: 24px; font-size: 12px; font-weight: 700; }
 footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28); padding-top: 24px; color: rgba(255,255,255,.72); }
+.credit-footer { background: var(--ink); color: rgba(255,255,255,.72); min-height: 58px; padding: 16px 6vw; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 11px; letter-spacing: .06em; }
+.credit-footer strong { color: var(--white); }
+.credit-footer a { color: var(--green); font-weight: 800; transition: color .2s, transform .2s; }
+.credit-footer a:hover { color: var(--gold); transform: translateY(-2px); }
+.credit-footer a b { margin-left: 8px; }
 
 @media (max-width: 900px) {
   .site-header { height: 88px; padding-top: 8px; }
@@ -218,6 +223,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .news-card h3 { min-height: 0; }
   .footer-links { grid-column: 1; flex-wrap: wrap; }
   footer > small { grid-column: 1; }
+  .credit-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
