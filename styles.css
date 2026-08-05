@@ -139,6 +139,32 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 500; color: va
 .df-leadership-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .df-leadership-media span { position: absolute; z-index: 1; left: 30px; bottom: 28px; background: var(--clay); color: var(--white); padding: 12px 16px; font-size: 10px; font-weight: 900; letter-spacing: .18em; }
 
+.df-map-section { padding: 115px 6vw 70px; background: var(--clay); color: var(--white); }
+.df-map-head { display: grid; grid-template-columns: 1fr 420px; gap: 8vw; align-items: end; margin-bottom: 55px; }
+.df-map-head h2 { font-size: clamp(44px, 5.2vw, 78px); }
+.df-map-head h2 em { color: var(--gold); }
+.df-map-head > p { color: #ffe1d5; line-height: 1.7; font-size: 17px; }
+.df-map-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .5fr); gap: 22px; }
+.df-map-canvas { min-height: 660px; position: relative; display: grid; place-items: center; overflow: hidden; background: #fff8ed; border-radius: 28px; }
+.df-map-canvas svg { width: 100%; height: 100%; max-height: 650px; padding: 24px; }
+.ra-shape { fill: var(--green); stroke: var(--ink); stroke-width: 1.25; vector-effect: non-scaling-stroke; cursor: pointer; transition: fill .2s, transform .2s, filter .2s; transform-box: fill-box; transform-origin: center; }
+.ra-shape:hover, .ra-shape:focus-visible { fill: var(--gold); outline: none; filter: drop-shadow(0 4px 5px rgba(32,30,30,.25)); }
+.ra-shape.active { fill: var(--clay); stroke: var(--white); stroke-width: 2.5; transform: scale(1.012); }
+.df-map-selection { position: absolute; left: 25px; bottom: 25px; min-width: 245px; padding: 18px 21px; background: var(--ink); color: var(--white); border-radius: 18px; box-shadow: 0 12px 30px rgba(32,30,30,.22); }
+.df-map-selection span, .df-map-selection small { display: block; color: #bbb7ad; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.df-map-selection strong { display: block; margin: 6px 0 2px; font-size: 19px; }
+.df-map-selection b { font-size: 31px; color: var(--gold); }
+.df-ra-panel { height: 660px; padding: 25px 18px 18px; background: var(--ink); border-radius: 28px; display: flex; flex-direction: column; }
+.df-ra-panel label { margin: 0 7px 10px; font-size: 12px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.df-ra-panel input { width: 100%; border: 0; outline: 0; border-radius: 999px; padding: 15px 18px; background: #353232; color: var(--white); }
+.df-ra-panel input:focus { box-shadow: 0 0 0 3px var(--gold); }
+.df-ra-list { margin-top: 16px; overflow-y: auto; scrollbar-color: var(--clay) transparent; }
+.df-ra-list button { width: 100%; padding: 13px 9px; display: flex; justify-content: space-between; gap: 12px; border: 0; border-bottom: 1px solid #44403e; background: transparent; color: var(--white); text-align: left; cursor: pointer; }
+.df-ra-list button:hover, .df-ra-list button:focus-visible, .df-ra-list button.active { color: var(--gold); outline: none; padding-left: 15px; }
+.df-ra-list button b { color: var(--green); font-size: 12px; }
+.df-map-source { margin: 22px 5px 0; color: #ffe1d5; font-size: 11px; }
+.map-loading { color: var(--ink); font-weight: 800; }
+
 .training { display: grid; grid-template-columns: 1fr 1fr; min-height: 760px; }
 .training-art { background: var(--gold); position: relative; overflow: hidden; min-height: 600px; }
 .training-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -208,6 +234,9 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .candidate-copy { padding: 85px 8vw; }
   .df-leadership-copy { padding: 85px 8vw; }
   .df-leadership-media { min-height: 500px; margin: 0 8vw 85px; border-radius: 0 0 0 85px; }
+  .df-map-head, .df-map-layout { grid-template-columns: 1fr; }
+  .df-map-head { gap: 25px; }
+  .df-ra-panel { height: 490px; }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .manifesto-grid { gap: 45px; }
   .pillars { grid-template-columns: 1fr; }
@@ -231,6 +260,12 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .commitment-item { grid-template-columns: 38px 1fr 24px; gap: 10px; }
   .training-art { min-height: 410px; }
   .df-leadership-media { min-height: 340px; margin: 0 7vw 70px; border-radius: 0 0 0 58px; }
+  .df-map-section { padding: 80px 5vw 55px; }
+  .df-map-canvas { min-height: 480px; border-radius: 20px; }
+  .df-map-canvas svg { padding: 6px; }
+  .df-map-selection { left: 14px; bottom: 14px; min-width: 210px; padding: 14px 16px; }
+  .df-map-selection b { font-size: 26px; }
+  .df-ra-panel { border-radius: 20px; }
   .training-word { font-size: 50px; }
   footer { grid-template-columns: 1fr; gap: 28px; }
   .news { padding: 85px 7vw 70px; }

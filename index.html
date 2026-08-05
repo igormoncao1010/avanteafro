@@ -21,6 +21,7 @@
   <meta name="twitter:image" content="https://avanteafro.vercel.app/assets/og-image.png">
   <link rel="icon" href="assets/logo-avante-afro.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="assets/df-regioes.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -95,6 +96,15 @@
         <small>Informação reproduzida do site oficial do Partido Avante.</small>
       </div>
       <div class="df-leadership-media"><img src="assets/gim-argello-avante-df.png" alt="Retrato de Gim Argello, presidente do Avante no Distrito Federal"><span>AVANTE DISTRITO FEDERAL</span></div>
+    </section>
+
+    <section class="df-map-section" id="territorios" aria-labelledby="df-map-title">
+      <div class="df-map-head"><div><p class="section-kicker light">Distrito Federal em dados</p><h2 id="df-map-title">35 regiões.<br><em>Um território inteiro.</em></h2></div><p>Explore cada Região Administrativa e conheça sua população urbana estimada pela PDAD Ampliada 2024.</p></div>
+      <div class="df-map-layout">
+        <div class="df-map-canvas" aria-label="Mapa interativo das regiões administrativas do Distrito Federal"><div class="map-loading">Carregando mapa…</div><div class="df-map-selection"><span>Região selecionada</span><strong>Ceilândia</strong><b>287.113</b><small>habitantes</small></div></div>
+        <div class="df-ra-panel"><label for="ra-search">Encontre uma região</label><input id="ra-search" type="search" placeholder="Digite o nome da RA"><div class="df-ra-list" aria-label="Lista das 35 regiões administrativas"></div></div>
+      </div>
+      <p class="df-map-source">Fonte: IPEDF Codeplan — Pesquisa Distrital por Amostra de Domicílios Ampliada (PDAD-A 2024). População urbana estimada.</p>
     </section>
 
     <section class="training" id="formacao">
