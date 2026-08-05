@@ -20,15 +20,15 @@ document.querySelector(".join-form")?.addEventListener("submit", (event) => {
 });
 
 const revealElements = Array.from(document.querySelectorAll(
-  ".manifesto-grid > *, .pillar, .commitments-head > *, .commitment-item, .candidate-media, .candidate-copy, .training-art, .training-copy, .join-copy, .join-form, .news-head > *, .news-card"
+    ".manifesto-grid > *, .pillar, .commitments-head > *, .commitment-item, .candidate-media, .candidate-copy, .df-leadership-copy, .df-leadership-media, .training-art, .training-copy, .join-copy, .join-form, .news-head > *, .news-card"
 ));
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 revealElements.forEach((element, index) => {
   element.classList.add("scroll-reveal");
   element.style.setProperty("--reveal-delay", `${(index % 3) * 90}ms`);
-  if (element.matches(".candidate-media, .training-art, .join-copy")) element.classList.add("reveal-left");
-  if (element.matches(".candidate-copy, .training-copy, .join-form")) element.classList.add("reveal-right");
+    if (element.matches(".candidate-media, .df-leadership-copy, .training-art, .join-copy")) element.classList.add("reveal-left");
+    if (element.matches(".candidate-copy, .df-leadership-media, .training-copy, .join-form")) element.classList.add("reveal-right");
 });
 
 if (reduceMotion || !("IntersectionObserver" in window)) {

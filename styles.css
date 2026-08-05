@@ -126,6 +126,19 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 500; color: va
 .candidate-button span { color: var(--gold); }
 .candidate-copy small { display: block; margin-top: 18px; color: #31585c; font-size: 10px; }
 
+.df-leadership { display: grid; grid-template-columns: 1.05fr .95fr; background: var(--white); color: var(--ink); min-height: 650px; overflow: hidden; }
+.df-leadership-copy { padding: 105px 8vw; align-self: center; }
+.df-leadership-copy h2 { font-size: clamp(42px, 4.7vw, 70px); }
+.df-leadership-copy h2 em { color: var(--clay); }
+.df-leadership-copy > p:not(.section-kicker) { max-width: 610px; color: #555248; font-size: 17px; line-height: 1.7; }
+.df-leadership-button { margin-top: 22px; background: var(--green); color: var(--ink); }
+.df-leadership-button span { color: var(--clay); }
+.df-leadership-copy small { display: block; margin-top: 18px; color: #736f64; font-size: 10px; }
+.df-leadership-media { position: relative; min-height: 560px; margin: 54px 5vw 54px 0; overflow: hidden; border-radius: 0 0 0 110px; }
+.df-leadership-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(32,30,30,.48)); pointer-events: none; }
+.df-leadership-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.df-leadership-media span { position: absolute; z-index: 1; left: 30px; bottom: 28px; background: var(--clay); color: var(--white); padding: 12px 16px; font-size: 10px; font-weight: 900; letter-spacing: .18em; }
+
 .training { display: grid; grid-template-columns: 1fr 1fr; min-height: 760px; }
 .training-art { background: var(--gold); position: relative; overflow: hidden; min-height: 600px; }
 .training-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -190,9 +203,11 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .hero-copy { padding: 68px 7vw 75px; }
   .hero-art { min-height: 580px; }
   .hero-note { position: relative; width: 100%; grid-column: 1; }
-  .manifesto-grid, .commitments-head, .candidate, .training, .join { grid-template-columns: 1fr; }
+  .manifesto-grid, .commitments-head, .candidate, .df-leadership, .training, .join { grid-template-columns: 1fr; }
   .candidate-media { min-height: 480px; }
   .candidate-copy { padding: 85px 8vw; }
+  .df-leadership-copy { padding: 85px 8vw; }
+  .df-leadership-media { min-height: 500px; margin: 0 8vw 85px; border-radius: 0 0 0 85px; }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .manifesto-grid { gap: 45px; }
   .pillars { grid-template-columns: 1fr; }
@@ -215,6 +230,7 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .manifesto h2, .commitments h2, .training h2, .join h2 { font-size: 42px; }
   .commitment-item { grid-template-columns: 38px 1fr 24px; gap: 10px; }
   .training-art { min-height: 410px; }
+  .df-leadership-media { min-height: 340px; margin: 0 7vw 70px; border-radius: 0 0 0 58px; }
   .training-word { font-size: 50px; }
   footer { grid-template-columns: 1fr; gap: 28px; }
   .news { padding: 85px 7vw 70px; }
