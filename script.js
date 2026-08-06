@@ -20,7 +20,7 @@ document.querySelector(".join-form")?.addEventListener("submit", (event) => {
 });
 
 const revealElements = Array.from(document.querySelectorAll(
-    ".manifesto-grid > *, .pillar, .commitments-head > *, .commitment-item, .candidate-media, .candidate-copy, .afro-president-media, .afro-president-copy, .df-leadership-copy, .df-leadership-media, .df-map-head > *, .df-map-canvas, .df-ra-panel, .training-art, .training-copy, .join-copy, .join-form, .news-head > *, .news-card"
+    ".manifesto-grid > *, .pillar, .commitments-head > *, .commitment-item, .candidate-media, .candidate-copy, .profiles-head > *, .profile-card, .afro-president-media, .afro-president-copy, .df-leadership-copy, .df-leadership-media, .df-map-head > *, .df-map-canvas, .df-ra-panel, .training-art, .training-copy, .join-copy, .join-form, .news-head > *, .news-card"
 ));
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

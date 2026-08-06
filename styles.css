@@ -126,6 +126,38 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 500; color: va
 .candidate-button span { color: var(--gold); }
 .candidate-copy small { display: block; margin-top: 18px; color: #31585c; font-size: 10px; }
 
+.candidate-profiles { padding: 115px 6vw 120px; background: var(--cream); }
+.profiles-head { display: grid; grid-template-columns: 1fr 420px; gap: 8vw; align-items: end; margin-bottom: 58px; }
+.profiles-head h2 { font-size: clamp(44px, 5.2vw, 78px); }
+.profiles-head h2 em { color: var(--clay); }
+.profiles-head > p { color: #5c574d; font-size: 17px; line-height: 1.7; }
+.profiles-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.profile-card { min-width: 0; overflow: hidden; border: 1px solid rgba(32,30,30,.16); border-radius: 0; background: var(--white); display: grid; grid-template-rows: auto 1fr; transition: transform .25s, box-shadow .25s; }
+.profile-card:hover { transform: translateY(-8px); box-shadow: 0 20px 42px rgba(32,30,30,.12); }
+.profile-photo { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--green); }
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.profile-photo > span { position: absolute; left: 20px; bottom: 18px; padding: 9px 12px; background: var(--clay); color: var(--white); font-size: 9px; font-weight: 900; letter-spacing: .16em; }
+.profile-info { padding: 25px 25px 30px; display: flex; flex-direction: column; }
+.profile-info small { color: var(--clay); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.profile-info h3 { margin: 8px 0 12px; font-size: clamp(25px, 2.4vw, 36px); line-height: 1.02; letter-spacing: -.045em; }
+.profile-info p { min-height: 150px; margin: 0; color: #69645a; font-size: 13px; line-height: 1.55; }
+.profile-info p strong { color: var(--ink); }
+.profile-info .profile-role { display: block; min-height: 25px; color: var(--clay); font-size: 10px; line-height: 1.25; }
+.demo-ribbon { position: absolute; z-index: 2; right: 14px; top: 15px; padding: 8px 10px; border-radius: 999px; background: var(--ink); color: var(--gold); font-size: 8px; letter-spacing: .14em; }
+.profile-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-top: 22px; }
+.profile-actions button { min-width: 0; padding: 10px 5px; border: 1px solid rgba(32,30,30,.18); border-radius: 11px; background: var(--cream); color: var(--ink); display: grid; justify-items: center; gap: 5px; }
+.profile-actions button i { width: 25px; height: 25px; display: grid; place-items: center; border-radius: 50%; background: var(--green); background-image: url('assets/icon-instagram.svg'); background-repeat: no-repeat; background-position: center; background-size: 13px; font-style: normal; font-size: 0; font-weight: 950; }
+.profile-actions button:nth-child(2) i { background-color: var(--clay); background-image: url('assets/icon-whatsapp.svg'); }
+.profile-actions button:nth-child(3) i { background-color: var(--gold); background-image: none; font-size: 14px; }
+.profile-actions button span { overflow: hidden; max-width: 100%; font-size: 9px; font-weight: 800; text-overflow: ellipsis; }
+.profile-actions button:disabled { opacity: .62; cursor: not-allowed; }
+.profile-placeholder { display: grid; place-items: center; background: var(--green); }
+.profile-card:nth-child(3n) .profile-placeholder { background: var(--gold); }
+.profile-card:nth-child(3n + 1) .profile-placeholder { background: var(--clay); }
+.profile-placeholder > div { width: 56%; aspect-ratio: 1; position: relative; }
+.profile-placeholder i { position: absolute; width: 38%; aspect-ratio: 1; border-radius: 50%; top: 4%; left: 31%; background: var(--ink); }
+.profile-placeholder b { position: absolute; width: 82%; height: 48%; border-radius: 50% 50% 10px 10px; left: 9%; bottom: 2%; background: var(--ink); }
+
 .afro-president { display: grid; grid-template-columns: .88fr 1.12fr; min-height: 760px; overflow: hidden; background: var(--gold); color: var(--ink); }
 .afro-president-media { position: relative; min-height: 680px; margin: 54px 0 54px 5vw; overflow: hidden; border-radius: 0 100px 0 0; background: #747478; }
 .afro-president-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(32,30,30,.45)); }
@@ -245,6 +277,8 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .manifesto-grid, .commitments-head, .candidate, .afro-president, .df-leadership, .training, .join { grid-template-columns: 1fr; }
   .candidate-media { min-height: 480px; }
   .candidate-copy { padding: 85px 8vw; }
+  .profiles-head { grid-template-columns: 1fr; gap: 25px; }
+  .profiles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .afro-president-media { min-height: 620px; margin: 70px 8vw 0; border-radius: 0 85px 0 0; }
   .afro-president-copy { padding: 75px 8vw 90px; }
   .df-leadership-copy { padding: 85px 8vw; }
@@ -276,6 +310,9 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.28
   .training-art { min-height: 410px; }
   .df-leadership-media { min-height: 340px; margin: 0 7vw 70px; border-radius: 0 0 0 58px; }
   .afro-president-media { min-height: 470px; margin: 55px 7vw 0; border-radius: 0 58px 0 0; }
+  .candidate-profiles { padding: 80px 7vw; }
+  .profiles-grid { grid-template-columns: 1fr; }
+  .profile-card { border-radius: 0; }
   .afro-president-copy { padding: 60px 7vw 75px; }
   .afro-president-copy blockquote { font-size: 21px; }
   .df-map-section { padding: 80px 5vw 55px; }
